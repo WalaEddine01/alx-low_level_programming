@@ -16,8 +16,7 @@ int main(void)
 	a = n - (a * 10);
 	if (a < 0){
 		a = a * -1;
-	if (a > 5)
-	else if (a == 0)
+	if (a == 0)
 		printf("Last digit of %d is %d and is 0\n", n, a);
 	else
 		printf("Last digit of %d is -%d and is less than 6 and not 0\n", n, a);
