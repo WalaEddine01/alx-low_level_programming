@@ -1,6 +1,10 @@
 #include <stdio.h>
-
-int main()
+/**
+ * main - entry point 
+ * Descriotion: print all charecters of alphabets 
+ * Return: always 0 (success)
+ */
+int main (void)
 {
 	char le;
 
