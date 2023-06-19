@@ -16,15 +16,8 @@ int main(void)
 			putchar(le);
 			if (la != 8 || le != 9)
 			{
-				if (la == 8 && le == 8)
-				{
-					putchar('\n');
-				}
-				else
-				{
 				putchar(',');
 				putchar(' ');
-				}
 			}
 		}
 	}
