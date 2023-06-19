@@ -8,13 +8,13 @@ int main(void)
 {
 	int le, la;
 
-	for (le = 48 ; le <=57 ; le++)
+	for (la = 48 ; la <=57 ; le++)
 	{
-		for (la = 48 ; la <=57 ; la++)
+		putchar(la);
+		if (la != 57)
 		{
-			putchar(la);
-				putchar(',');
-				putchar(' ');
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
