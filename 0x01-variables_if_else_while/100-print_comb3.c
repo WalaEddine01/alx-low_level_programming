@@ -10,12 +10,15 @@ int main(void)
 
 	for (la = 48 ; la <= 56 ; la++)
 	{
-		for (le = 49 ; le <= 57 ;le++ )
+		for (le = la + 1 ; le <= 57 ; le++)
 		{
+			putchar(la);
+			putchar(le);
 			if (la != 8 || le != 9)
 			{
 				if (la == 8 && le == 8)
 				{
+					putchar('\n');
 				}
 				else
 				{
