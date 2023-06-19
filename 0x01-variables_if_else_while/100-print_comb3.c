@@ -1,20 +1,20 @@
 #include <stdio.h>
 /**
- * main - Entry point
- * Description: print all possible combination of single-digit numbers
- * Return: Always 0 (Success)
- */
+* main - entry point
+* Description: prints all possible different combinations of two digits
+* Return: always 0 (success)
+*/
 int main(void)
 {
-	int la, le;
+	int num1, num2;
 
-	for (la = 48 ; la <= 56 ; la++)
+	for (num1 = 0; num1 <= 8; num1++)
 	{
-		for (le = la + 1 ; le <= 57 ; le++)
+		for (num2 = num1 + 1; num2 <= 9; num2++)
 		{
-			putchar(la);
-			putchar(le);
-			if (la != 8 || le != 9)
+			putchar(num1 + '0');
+			putchar(num2 + '0');
+			if (!(num1 == 8 && num2 == 9))
 			{
 				putchar(',');
 				putchar(' ');
