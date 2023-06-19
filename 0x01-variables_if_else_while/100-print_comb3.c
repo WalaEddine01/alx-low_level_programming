@@ -12,15 +12,16 @@ int main(void)
 	{
 		for (le = 49 ; le <= 57 ;le++ )
 		{
-			if (la != le)
-			{
-			putchar(la);
-			putchar(le);
-			}
 			if (la != 8 || le != 9)
 			{
+				if (la == 8 && le == 8)
+				{
+				}
+				else
+				{
 				putchar(',');
 				putchar(' ');
+				}
 			}
 		}
 	}
