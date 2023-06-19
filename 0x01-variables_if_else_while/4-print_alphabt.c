@@ -1,9 +1,5 @@
 #include <stdio.h>
-/**
- * main - entry point
- * description: print all alphabets expect q and e
- * return: always 0 (success)
- */
+
 int main(void)
 {
 	int le;
