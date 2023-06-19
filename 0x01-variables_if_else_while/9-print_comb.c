@@ -12,8 +12,7 @@ int main(void)
 	{
 		for (la = 48 ; la <=57 ; la++)
 		{
-			putchar(le);
-			putchar(la);
+			putchar(le, la);
 			if (le != 57 || la != 57)
 			{
 				putchar(',');
