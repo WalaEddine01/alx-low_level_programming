@@ -7,7 +7,6 @@
  */
 int _islower(int c)
 {
-	_putchar(c);
 	if (c <= 122 && c >= 97)
 	{
 		return (1);
