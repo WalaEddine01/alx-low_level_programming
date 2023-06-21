@@ -4,10 +4,11 @@
  * @c: we make the operation on @c
  * Return: the last digit of @c
  */
+int _abs(int c);
 int print_last_digit(int c)
 {
 	c = (c % 10);
-	c = 6-abs(c);
+	c = _abs(c);
 	_putchar(c + '0');
 	return (c);
 }
