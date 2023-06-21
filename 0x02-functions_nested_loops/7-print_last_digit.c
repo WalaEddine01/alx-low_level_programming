@@ -10,5 +10,6 @@ int print_last_digit(int c)
 
 	a = (c / 10);
 	c = c - (a * 10);
+	_putchar(c);
 	return (c);
 }
