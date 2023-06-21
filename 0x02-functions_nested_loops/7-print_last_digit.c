@@ -6,8 +6,6 @@
  */
 int print_last_digit(int c)
 {
-	int a;
-
 	c = (c % 10);
 	_putchar(c + '0');
 	return (c);
