@@ -9,8 +9,6 @@ void print_to_98(int n)
 {
 	int i;
 
-	printf("%d", n);
-	printf(", ");
 	if (98 > n)
 	{
 		printf("%d", n);
