@@ -35,12 +35,7 @@ void times_table(void)
 				}
 			}
 		}
-		if (j != 9)
-		{
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
-		}
+		_putchar('\n');
 	}
 	_putchar('\n');
 }
