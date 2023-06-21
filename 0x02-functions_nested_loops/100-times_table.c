@@ -28,7 +28,7 @@ void print_times_table(int n)
 					_putchar(a + '0');
 				}
 			}
-			_putchar('\n')
+			_putchar('\n');
 		}
 	}
 }
