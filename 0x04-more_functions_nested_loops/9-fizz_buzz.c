@@ -14,9 +14,7 @@ int main(void)
 		a = i % 3;
 		k = i % 5;
 		if (a == 0 && k == 0)
-		{
 			printf("FizzBuzz ");
-		}
 		else
 		{
 			if (a == 0)
@@ -24,13 +22,9 @@ int main(void)
 			else
 			{
 				if (k == 0)
-				{
 					printf("Buzz ");
-				}
 				else
-				{
 					printf("%d ", i);
-				}
 			}
 		}
 	}
