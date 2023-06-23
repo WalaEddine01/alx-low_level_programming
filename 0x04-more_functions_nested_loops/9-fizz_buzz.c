@@ -9,25 +9,28 @@ int main(void)
 {
 	int i, a, k;
 
-	for (i = 0; i <= 100; i++)
+	for (i = 1; i <= 100; i++)
 	{
 		a = i % 3;
 		k = i % 5;
 		if (a == 0 && k == 0)
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		else
 		{
 			if (a == 0)
-				printf("Fizz ");
+				printf("Fizz");
 			else
 			{
 				if (k == 0)
-					printf("Buzz ");
+					printf("Buzz");
 				else
-					printf("%d ", i);
+					printf("%d", i);
 			}
 		}
+		if (i != 100)
+			printf(" ");
+		else
+			printf("\n");
 	}
-	printf("\n");
 	return (0);
 }
