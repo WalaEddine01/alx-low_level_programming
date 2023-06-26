@@ -16,8 +16,8 @@ void print_array(int *a, int n)
 		printf("%d", a[i]);
 		if (i != n)
 		{
-			_putchar(',');
-			_putchar(' ');
+			printf(",");
+			printf(" ");
 		}
 	}
 	_putchar('\n');
