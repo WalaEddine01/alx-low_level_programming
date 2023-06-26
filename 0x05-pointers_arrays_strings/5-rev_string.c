@@ -17,6 +17,7 @@ void rev_string(char *s)
 		a++;
 		i++;
 	}
+	a = a / 2;
 	while (i--)
 	{
 		w = s[i];
