@@ -14,4 +14,5 @@ void print_square(int size);
 void print_triangle(int size);
 void reset_to_98(int *n);
 void swap_int(int *a, int *b);
+int _strlen(char *s);
 #endif /* MAIN_H */
