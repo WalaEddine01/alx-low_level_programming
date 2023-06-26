@@ -17,9 +17,12 @@ void print_rev(char *s)
 		a++;
 		i++;
 	}
-	for (i = a; i >= 0; i--)
+	i = a;
+	while (i)
 	{
 		_putchar(s[i]);
+		i--;
 	}
+	
 	_putchar('\n');
 }
