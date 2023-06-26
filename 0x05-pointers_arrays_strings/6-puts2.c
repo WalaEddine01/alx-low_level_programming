@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _puts2 - prints a string
+ * puts2 - prints a string
  * @str: string
  * don't return
  */
@@ -13,6 +13,7 @@ void puts2(char *str)
 	{
 		if (i % 2 == 0)
 			_putchar(str[i]);
+		i++;
 	}
 	_putchar('\n');
 }
