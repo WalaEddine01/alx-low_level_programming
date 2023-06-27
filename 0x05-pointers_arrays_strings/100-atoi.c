@@ -20,7 +20,6 @@ int _atoi(char *s)
 			if (s[i] >= '0' && s[i] <= '9')
 			{
 				d = d * 10 + s[i] - '0';
-				d = d * b;
 			}
 			else
 			{
@@ -29,5 +28,6 @@ int _atoi(char *s)
 			}
 		i++;
 	} while (s[i] != 0);
+	d = d * b;
 	return (d);
 }
