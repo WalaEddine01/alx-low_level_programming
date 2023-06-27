@@ -14,11 +14,10 @@ int main(void)
 	srand(time(NULL));
 	while (i <= 2645)
 	{
-		b = rand() % 120;
+		b = rand() % 94 + 32;
 		i = i + b;
 		putchar(b);
 	}
-	putchar('\0');
 	putchar(2772 - i);
 	return (0);
 }
