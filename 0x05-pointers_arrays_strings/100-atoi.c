@@ -16,16 +16,15 @@ int _atoi(char *s)
 		{
 			b = b * -1;
 		}
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			d = d * 10 + s[i] - '0';
+		}
 		else
-			if (s[i] >= '0' && s[i] <= '9')
-			{
-				d = d * 10 + s[i] - '0';
-			}
-			else
-			{
-				if (d > 0 || d < 0)
-					break;
-			}
+		{
+			if (d > 0 || d < 0)
+				break;
+		}
 		i++;
 	} while (s[i] != 0);
 	d = d * b;
