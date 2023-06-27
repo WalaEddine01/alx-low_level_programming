@@ -35,7 +35,7 @@ int _atoi(char *s)
 				d = d * -1;
 				f = 1;
 			}
-		if (f == 1 && s[i] < 48 && s[i] > 57 && s[i] != '-')
+		if (f == 1 && s[i] < 48 || s[i] > 57 || s[i] != '-')
 			break;
 	}
 	return (d);
