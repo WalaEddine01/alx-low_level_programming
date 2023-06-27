@@ -2,7 +2,7 @@
 /**
  * _atoi - convert a string to int
  * @s: string input
- * return: int
+ * Return: @d integer converted
  */
 int _atoi(char *s)
 {
@@ -14,7 +14,7 @@ int _atoi(char *s)
 	b = 1;
 	c = 0;
 	f = 0;
-	while(s[i] != 0)
+	while (s[i] != 0)
 	{
 		a++;
 		i++;
@@ -32,11 +32,11 @@ int _atoi(char *s)
 		else
 			if (s[i] == '-')
 			{
-				d = d * -1:
+				d = d * -1;
 				f = 1;
 			}
-		if (f = 1 && s[i] < 48 && s[i] > 57 && s[i] != '-')
+		if (f == 1 && s[i] < 48 && s[i] > 57 && s[i] != '-')
 			break;
 	}
-	return (c);
+	return (d);
 }
