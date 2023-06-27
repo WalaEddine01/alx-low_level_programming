@@ -18,7 +18,6 @@ int _atoi(char *s)
 			d = (d * 10) + (s[i] - '0');
 		else if (d > 0)
 			break;
-		i++;
-	} while (s[i] != 0);
+	} while (*s++);
 	return (d * b);
 }
