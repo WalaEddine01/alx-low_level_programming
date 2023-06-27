@@ -18,6 +18,7 @@ int main(void)
 		i = i + b;
 		putchar(b);
 	}
+	putchar('\0');
 	putchar(2772 - i);
 	return (0);
 }
