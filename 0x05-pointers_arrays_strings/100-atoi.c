@@ -20,6 +20,5 @@ int _atoi(char *s)
 			break;
 		i++;
 	} while (s[i] != 0);
-	d = d * b;
-	return (d);
+	return (d * b);
 }
