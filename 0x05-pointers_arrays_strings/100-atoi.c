@@ -14,7 +14,7 @@ int _atoi(char *s)
 	do {
 		if (s[i] == '-')
 			b = b * -1;
-		if (s[i] >= '0' && s[i] <= '9')
+		else if (s[i] >= '0' && s[i] <= '9')
 			d = (d * 10) + (s[i] - '0');
 		else if (d > 0)
 			break;
