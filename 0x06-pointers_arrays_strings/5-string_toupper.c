@@ -13,11 +13,6 @@ char *string_toupper(char *b)
 	a = 0;
 	while (b[i] != 0)
 	{
-		a++;
-		i++;
-	}
-	for (i = 0; i < a; i++)
-	{
 		if (b[i] >= 'a' || b[i] <= 'z')
 		{
 			b[i] -= 32;
