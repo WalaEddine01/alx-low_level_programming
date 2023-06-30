@@ -20,7 +20,7 @@ char *string_toupper(char *b)
 	{
 		if (b[i] >= 'a' || b[i] <= 'z')
 		{
-			b[i] += 32;
+			b[i] -= 32;
 		}
 		i++;
 	}
