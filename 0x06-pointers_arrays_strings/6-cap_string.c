@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * *cap_string - capitalizes all words
- * @b: input
+ * cap_string - capitalizes all words
+ * @b: inputstring
  * Return: @d compitalized string
  */
 char *cap_string(char *b)
@@ -11,7 +11,8 @@ char *cap_string(char *b)
 	i = 0;
 	while (b[i] != 0)
 	{
-		if (b[i] == ' ' || b[i] == '\t' || b[i] == '\n' ||
+		if (b[i] == ' ' || b[i] == '\t' 
+				|| b[i] == '\n' ||
 				b[i] == ',' || b[i] == ';' ||
 				b[i] == '.' || b[i] == '!' ||
 				b[i] == '?' || b[i] == '"' ||
