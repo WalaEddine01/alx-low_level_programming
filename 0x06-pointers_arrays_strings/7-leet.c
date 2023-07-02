@@ -12,7 +12,7 @@ char *leet(char *b)
 	i = 0;
 	for (i = 0; b[i] != 0; i++)
 	{
-		for (j = 0; j < 6; j++)
+		for (j = 0; j < 10; j++)
 		{
 			if (b[i] == a[j][0])
 			{
