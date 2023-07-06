@@ -27,4 +27,5 @@ int is_palindrome2(char *s, int start, int end)
 		return (1);
 	if (s[start] == s[end])
 		return (is_palindrome2(s, start + 1, end - 1));
+	return (0);
 }
