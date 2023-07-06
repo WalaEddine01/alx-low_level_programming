@@ -19,6 +19,6 @@ int squar_recu(int n, int v)
 	if (v * v ==  n)
 		return (v);
 	if (v * v < n)
-		return (squar_recu(n, val + 1));
+		return (squar_recu(n, v + 1));
 	return (-1);
 }
