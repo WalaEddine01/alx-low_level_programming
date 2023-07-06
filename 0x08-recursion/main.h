@@ -3,6 +3,7 @@
 
 int squar_recu(int n, int v);
 int is_prime_number2(int n, int i);
+int is_palindrome2(char *s, int start, int end);
 int _putchar(char c);
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
