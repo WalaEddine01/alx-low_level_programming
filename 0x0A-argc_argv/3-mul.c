@@ -9,7 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc > 3 || argc == 0 || argv[1] > '0' || argv[2] > '0' || argv[1] < '9' || argv[2] < '9')
+	int i;
+	if (argc > 3 || argc == 1)
 	{
 		printf("Error\n");
 		return (1);
