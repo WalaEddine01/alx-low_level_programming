@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * main - prints its name
  * @argc: count command line arg
@@ -7,6 +8,6 @@
  */
 int main(int argc, char argv[])
 {
-	printf("%s", argv[argc]);
+	printf("%s\n", argv[L
 	return (0);
 }
