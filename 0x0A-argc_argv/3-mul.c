@@ -9,8 +9,11 @@
  */
 int main(int argc, char *argv[])
 {
-	atoi(argv[2]) = atoi(argv[2]) * atoi(argv[1]);
-	printf("%d\n", atoi(argv[2]);
+	int i;
+
+	(void)argc;
+	i = atoi(argv[2]) * atoi(argv[1]);
+	printf("%d\n", i);
 
 	return (0);
 }
