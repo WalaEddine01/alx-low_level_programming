@@ -11,8 +11,7 @@ int main(int argc, char *argv[])
 {
 	int i;
 
-	if (argc > 3 || argc == 1
-			|| (atoi(argv[1]) < '0' && atoi(argv[1]) > '9')
+	if (argc != 3 || (atoi(argv[1]) < '0' && atoi(argv[1]) > '9')
 			|| (atoi(argv[2]) < '0' && atoi(argv[2]) > '9'))
 	{
 		printf("Error\n");
