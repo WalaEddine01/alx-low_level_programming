@@ -22,17 +22,15 @@ char *str_concat(char *s1, char *s2)
 	while (*s2 != 0)
 		j++;
 	a = i + j;
-	p = malloc(sizeof(char) * a);
+	p = malloc((sizeof(char) * a) + 1);
 	if (p == 0)
 		return (0);
-	for (k = 0; k < i; k++)
-		p[k] = s1[k];
-	m = 0;
-	k = k + 1;
-	for (l = k; l < a; l++)
+	for (k = 0; k < a; k++)
 	{
-		p[l] = s2[m];
-		m++;
+		if (k < i)
+			p[i] = s1[i];
+		else
+			p[i] = s2[i];
 	}
 	return (p);
 }
