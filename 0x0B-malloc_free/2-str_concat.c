@@ -7,7 +7,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, k, l, a, m;
+	int i, j, k, a;
 	char *p;
 
 	i = 0;
@@ -28,9 +28,9 @@ char *str_concat(char *s1, char *s2)
 	for (k = 0; k < a; k++)
 	{
 		if (k < i)
-			p[i] = s1[i];
+			p[k] = s1[k];
 		else
-			p[i] = s2[i];
+			p[k] = s2[k - i];
 	}
 	return (p);
 }
