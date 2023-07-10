@@ -29,4 +29,3 @@ char *str_concat(char *s1, char *s2)
 	p[k + l] = '\0';
 	return (p);
 }
-
