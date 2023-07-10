@@ -7,7 +7,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, k, a;
+	int i, j, k, a, l;
 	char *p;
 
 	if (s1 == 0)
