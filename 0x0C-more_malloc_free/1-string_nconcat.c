@@ -20,7 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			return (0);
 		for (i = 0; i < strlen(s1); i++)
 		{
-			p[i] = s2[i];
+			p[i] = s1[i];
 		}
 		return (p);
 	}
@@ -52,3 +52,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	return (p);
 }
+
