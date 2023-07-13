@@ -8,6 +8,7 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+	unsigned int i, j, a, b;
 	char *p;
 
 	if (s1 == 0 || s2 == 0 || n == 0)
