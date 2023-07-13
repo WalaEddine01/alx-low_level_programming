@@ -21,20 +21,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (0);
 	for (i = 0; i < a; i++)
 	{
-		*p + i = *s1 + i;
+		p[i] = s2[i];
 	}
 	if (n >= b)
 	{
 		for (j = 0; j < b; j++)
 		{
-			*p + i = *s2 + j;
+			p[i] = s2[j];
 		}
 	}
 	else
 	{
 		for (j = 0; j < n; j++)
 		{
-			*p + i = *s2 + j;
+			p[i] = s2[j];
 		}
 	}
 	return (p);
