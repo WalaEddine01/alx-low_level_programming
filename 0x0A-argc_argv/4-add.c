@@ -9,16 +9,16 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j;
+	int i, j, k;
 	char *p;
 
 	j = 0;
 	for (i = 1; i < argc; i++)
 	{
 		p = argv[i];
-		for ( i = 0; p[i] != 0; i++)
+		for ( k = 0; p[k] != 0; k++)
 		{
-			if (p[i] < '0' || p[i] > '9')
+			if (p[k] < '0' || p[k] > '9')
 			{
 				printf("Error\n");
 				return (1);
