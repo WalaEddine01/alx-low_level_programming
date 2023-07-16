@@ -10,15 +10,19 @@
 int main(int argc, char *argv[])
 {
 	int i, j;
+	char *p;
 
 	j = 0;
 	for (i = 1; i < argc; i++)
 	{
-		if ((atoi(argv[1]) < '0' && atoi(argv[1]) > '9')
-			|| (atoi(argv[2]) < '0' && atoi(argv[2]) > '9'))
+		p = argv[i];
+		for ( i = 0; p[i] != 0; i++)
 		{
-			printf("Error\n");
-			return (1);
+			if (p[i] < '0' || p[i] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 		j = j + atoi(argv[i]);
 	}
