@@ -1,6 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
-#define PRINT printf("%s", __FILE__)
+#define PRINT printf("%s\n", __FILE__)
 
 #include <stdio.h>
 #include <stdlib.h>
