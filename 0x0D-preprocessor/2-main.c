@@ -3,7 +3,7 @@
  * main - prints the name of the file
  * Return: 0
  */
-int main()
+int main(void)
 {
 	PRINT;
 	return (0);
