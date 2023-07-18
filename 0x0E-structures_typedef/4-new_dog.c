@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 /**
  * _strlen - returns the length of a string
  * @s: pointer at the first charechter of a string
