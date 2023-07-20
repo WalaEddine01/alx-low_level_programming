@@ -1,5 +1,9 @@
 #include "function_pointers.h"
 /**
+ * main - prints Opcodes
+ * @args: number of args
+ * @argv: array of args
+ * Return: Allways 0 (Success)
  */
 int main(int args, char **argv)
 {
