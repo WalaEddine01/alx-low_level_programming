@@ -3,8 +3,7 @@ section	.data
 section	.text
 	extern	printf
 	global	_start
-
 _start:
-	mov	edi,	0
+	mov	edi,	msg
 	mov	eax,	0
 	call 	printf
