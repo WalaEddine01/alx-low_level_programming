@@ -9,6 +9,7 @@ char *rot13(char *s)
 	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	int i = 0;
+	char *p = s;
 
 	while (*s != 0)
 	{
@@ -22,5 +23,5 @@ char *rot13(char *s)
 		}
 		s++;
 	}
-	return (s);
+	return (p);
 }
