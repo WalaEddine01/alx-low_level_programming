@@ -12,7 +12,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	if (new_size > old_size)
 	{
-		p = malloc(old_size);
+		p = malloc(new_size);
 		if (p == 0)
 			return (0);
 		memcpy(p, ptr, old_size);
