@@ -11,7 +11,7 @@ char *cap_string(char *b)
 	i = 0;
 	while (b[i] != 0)
 	{
-		if (b[i] == ' ' || b[i] == '\t' 
+		if (b[i] == ' ' || b[i] == '\t'
 				|| b[i] == '\n' ||
 				b[i] == ',' || b[i] == ';' ||
 				b[i] == '.' || b[i] == '!' ||
