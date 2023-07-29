@@ -13,7 +13,7 @@ char *rot13(char *s)
 
 	while (*s != 0)
 	{
-		for (i; i < 52; i++)
+		for (i = 0; i < 52; i++)
 		{
 			if (*s == rot13[i])
 			{
