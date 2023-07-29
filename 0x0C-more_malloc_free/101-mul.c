@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
  * main - multiplies two positive numbers
  * @argc: number of args
@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(98);
 	}
-	while (*argv[1] != 0)
+	while (*argv[1] != '\0')
 	{
 		if (*argv[1] < '0' || *argv[1] > '9')
 		{
@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 		}
 		argv[1]++;
 	}
-	while (*argv[2] != 0)
+	while (*argv[2] != '\0')
 	{
 		if (*argv[2] < '0' || *argv[2] > '9')
 		{
@@ -37,6 +37,9 @@ int main(int argc, char **argv)
 		}
 		argv[2]++;
 	}
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+
 	mul = num1 * num2;
 	printf("%d\n", mul);
 	return (0);
