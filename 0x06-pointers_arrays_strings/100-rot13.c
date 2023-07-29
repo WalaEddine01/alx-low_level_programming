@@ -1,10 +1,10 @@
 #include "main.h"
 /**
  * rot13 - encode string using ROT13
- * @a: input string
+ * @s: input string
  * Return: encoded string
  */
-char *rot13(char *a)
+char *rot13(char *s)
 {
 	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
