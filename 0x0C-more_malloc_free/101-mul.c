@@ -8,6 +8,7 @@
 int main(int argc, char **argv)
 {
 	int mul, num1, num2;
+	char *str, *str2;
 
 	if (argc != 3)
 	{
@@ -19,23 +20,25 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(98);
 	}
-	while (*argv[1] != '\0')
+	str = argv[1];
+	str2 = argv[2];
+	while (*str != '\0')
 	{
-		if (*argv[1] < '0' || *argv[1] > '9')
+		if (*str < '0' || *str > '9')
 		{
 			printf("Error\n");
 			exit(98);
 		}
-		argv[1]++;
+		str++;
 	}
-	while (*argv[2] != '\0')
+	while (*str2 != '\0')
 	{
-		if (*argv[2] < '0' || *argv[2] > '9')
+		if (*str2 < '0' || *str2 > '9')
 		{
 			printf("Error\n");
 			exit(98);
 		}
-		argv[2]++;
+		str2++;
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[2]);
