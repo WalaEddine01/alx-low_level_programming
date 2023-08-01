@@ -7,7 +7,7 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	int i = 0;
-	listint_t *p;
+	const listint_t *p;
 
 	p = head;
 	if (head == 0)
