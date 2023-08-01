@@ -6,7 +6,7 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *ptr, *ptr2;
+	listint_t *ptr = NULL, *ptr2 = NULL;
 	int n = 0;
 
 	if (!h || !*h)
