@@ -8,7 +8,7 @@ void free_listint2(listint_t **head)
 {
 	listint_t *ptr, *ptr2;
 
-	if (!head || !*head == 0)
+	if (!head || !*head)
 		return;
 
 	ptr2 = *head;
