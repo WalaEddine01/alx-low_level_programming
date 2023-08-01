@@ -7,7 +7,10 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *ptr;
-	unsigned int i;
+	int i;
+
+	if (*head == 0 || head == 0)
+		return (0);
 
 	ptr = *head;
 	*head = (*head)->next;
