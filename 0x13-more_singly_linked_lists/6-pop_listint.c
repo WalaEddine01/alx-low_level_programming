@@ -7,7 +7,7 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *ptr;
-	int i;
+	unsigned int i;
 
 	ptr = *head;
 	*head = (*head)->next;
