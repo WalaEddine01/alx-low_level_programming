@@ -6,10 +6,10 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	unsigned int i = 0;
+	size_t i = 0;
 	const listint_t *p;
 
-	if (head == 0)
+	if (head == NULL)
 	{
 		exit(98);
 	}
