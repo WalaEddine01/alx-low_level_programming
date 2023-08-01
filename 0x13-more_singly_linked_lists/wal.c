@@ -22,8 +22,8 @@ int main(void)
     add_nodeint_end(&head, 402);
     add_nodeint_end(&head, 1024);
     print_listint(head);
-    reverse_listint(&head);
-    print_listint(head);    
     free_listint2(&head);
+    printf("%p\n", (void *)head);
     return (0);
 }
+
