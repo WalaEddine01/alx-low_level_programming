@@ -6,7 +6,7 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t i = 1;
+	size_t i = 0;
 
 	if (head == NULL)
 		return (0);
