@@ -11,11 +11,10 @@ size_t free_listint_safe(listint_t **h)
 
 	if (!h || !*h)
 		return (n);
-	ptr2 = *h;
 	while (ptr2)
 	{
-		ptr = ptr2;
-		ptr2 = ptr2->next;
+		ptr = *h;
+		*h = (*h)->next;
 		free(ptr);
 		n++;
 	}
