@@ -9,7 +9,7 @@ size_t print_listint_safe(const listint_t *head)
 	size_t i = 0;
 
 	if (head == NULL)
-		exit(98);
+		return (0);
 	while (head != NULL)
 	{
 		printf("[%p] %d\n", (void *)head, head->n);
