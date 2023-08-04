@@ -24,5 +24,4 @@ void print_binary(unsigned long int n)
 			printf("0");
 		l >>= 1;
 	}
-	printf("\n");
 }
