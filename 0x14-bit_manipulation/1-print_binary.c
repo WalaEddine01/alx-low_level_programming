@@ -13,13 +13,14 @@ void print_binary(unsigned long int n)
 		printf("0");
 		return;
 	}
-	l = n / 2;
-	j = n % 2;
+	l <<= sizeof(unsigned long int) * 8 - 1;
 	while (l > 0)
 	{
-		printf("%u", j);
-		j = l % 2;
-		l = l / 2;
+		if (n & l)
+			printf('1');
+		else
+			printf('0');
+		l >>= 1;
 	}
-	printf("%u", j);
+	printf("\n");
 }
