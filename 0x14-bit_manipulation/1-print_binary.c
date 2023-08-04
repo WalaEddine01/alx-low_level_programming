@@ -13,7 +13,7 @@ void print_binary(unsigned long int n)
 		printf("0");
 		return;
 	}
-	l <<= sizeof(unsigned long int) * 8 - 1;
+	l <<= sizeof((unsigned long int) * 8 - 1);
 	while (l > 0)
 	{
 		if (n & l)
