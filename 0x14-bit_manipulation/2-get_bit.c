@@ -3,7 +3,7 @@
  * get_bit - Returns the value of bit at the index given
  * @n: input nulber
  * @index: the index of the bit
- * Return: the value of the bit
+ * Return: the value of the bit -1 if it fail
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
