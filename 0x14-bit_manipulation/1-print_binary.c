@@ -6,20 +6,20 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int j = 0, l = 0;
+	unsigned long int l = 1;
 
 	if (n == 0)
 	{
-		printf("0");
+		printf("0\n");
 		return;
 	}
-	l <<= sizeof((unsigned long int) * 8 - 1);
+	l <<= ((sizeof(unsigned long int) * 8) - 1);
 	while (l > 0)
 	{
 		if (n & l)
-			printf('1');
+			printf("1");
 		else
-			printf('0');
+			printf("0");
 		l >>= 1;
 	}
 	printf("\n");
