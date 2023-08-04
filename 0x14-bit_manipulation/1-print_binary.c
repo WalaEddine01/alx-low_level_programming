@@ -14,6 +14,8 @@ void print_binary(unsigned long int n)
 		return;
 	}
 	l <<= ((sizeof(unsigned long int) * 8) - 1);
+	while ((n & l) == 0)
+		l >>= 1;
 	while (l > 0)
 	{
 		if (n & l)
