@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 	{
-		printf("0\n");
+		printf("0");
 		return;
 	}
 	l <<= ((sizeof(unsigned long int) * 8) - 1);
