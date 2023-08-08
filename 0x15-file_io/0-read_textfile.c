@@ -7,7 +7,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t fd, n = 0, i = 0, a = 0;
+	ssize_t fd, n = 0, a = 0;
 	char buf[1024];
 
 	fd = open(filename, O_RDONLY);
@@ -22,16 +22,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	while (buf[i] != '\0')
-	{
-		a = write(STDOUT_FILENO, &buf[i], 1);
+		a = write(STDOUT_FILENO, &buf[0], n);
 		if (a == -1)
 		{
 			close(fd);
 			return (0);
 		}
-		i++;
-	}
 	close(fd);
 	return (n);
 }
