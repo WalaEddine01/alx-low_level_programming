@@ -43,18 +43,15 @@ int check_msg2_writing(ssize_t a, char *namefile)
 int check_msg3_close(ssize_t a, ssize_t fd, char *buf)
 {
 	char *msg3 = "Error: Can't close fd ";
-	
-	if (a == 0)
-	{
-		return (0);
-	}
-	else
+
+	if (a == -1)
 	{
 		write(2, msg3, strlen(msg3));
 		printf("%li\n", fd);
 		free(buf);
 		exit(100);
 	}
+	return (a);
 }
 /**
  * check_msg4_read_exist - check if filedoes not exist, or can not read it
@@ -83,7 +80,7 @@ int check_msg4_read_exist(ssize_t a, char *namefile)
  */
 int main(int argc, char **argv)
 {
-	ssize_t fd_to, fd_from, a;
+	ssize_t fd_to, fd_from, a, b;
 	char *buf;
 
 	check_msg_args(argc);
@@ -93,14 +90,14 @@ int main(int argc, char **argv)
 		fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 		check_msg2_writing(fd_to, argv[2]);
 		buf = malloc(sizeof(char) * 1024);
-		fd_from = read(fd_from, buf, 1024);
-		check_msg4_read_exist(fd_from, argv[1]);
-		fd_to = dprintf(fd_to, buf, fd_from);
-		check_msg2_writing(fd_to, argv[2]);
+		a = read(fd_from, buf, 1024);
+		check_msg4_read_exist(a, argv[1]);
+		b = write(fd_to, buf, a);
+		check_msg2_writing(b, argv[2]);
 		a = close(fd_from);
 		check_msg3_close(a, fd_from, buf);
-		a = close(fd_to);
-		check_msg3_close(a, fd_to, buf);
+		b = close(fd_to);
+		check_msg3_close(b, fd_to, buf);
 		free(buf);
 	}
 	else
