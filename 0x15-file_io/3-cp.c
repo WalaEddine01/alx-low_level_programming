@@ -80,7 +80,7 @@ int check_msg4_read_exist(ssize_t a, char *namefile)
  */
 int main(int argc, char **argv)
 {
-	ssize_t fd_to, fd_from, a, b;
+	ssize_t fd_to, fd_from, a;
 	char *buf;
 
 	check_msg_args(argc);
@@ -96,8 +96,7 @@ int main(int argc, char **argv)
 		check_msg2_writing(fd_to, argv[2]);
 		a = close(fd_from);
 		check_msg3_close(a, fd_from, buf);
-		b = close(fd_to);
-		check_msg3_close(b, fd_to, buf);
+		a = close(fd_to);
 		free(buf);
 	}
 	else
