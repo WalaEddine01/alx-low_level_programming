@@ -10,7 +10,7 @@ int check_msg_args(int a)
 
 	if (a != 3)
 	{
-		write(2, msg, _strlen(msg));
+		write(2, msg, strlen(msg));
 		exit(97);
 	}
 	return (0);
@@ -27,7 +27,7 @@ int check_msg2_writing(ssize_t a, char *namefile)
 
 	if (a == -1)
 	{
-		write(2, msg2, _strlen(msg2));
+		write(2, msg2, strlen(msg2));
 		printf("%s\n", namefile);
 		exit(99);
 	}
@@ -46,7 +46,7 @@ int check_msg3_close(ssize_t a, ssize_t fd, char *buf)
 
 	if (a == -1)
 	{
-		write(2, msg3, _strlen(msg3));
+		write(2, msg3, strlen(msg3));
 		printf("%li\n", fd);
 		free(buf);
 		exit(100);
@@ -65,7 +65,7 @@ int check_msg4_read_exist(ssize_t a, char *namefile)
 
 	if (a == -1)
 	{
-		write(2, msg4, _strlen(msg4));
+		write(2, msg4, strlen(msg4));
 		printf("%s\n", namefile);
 		exit(98);
 	}

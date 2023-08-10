@@ -16,6 +16,5 @@ int check_msg4_read_exist(ssize_t a, char *namefile);
 int check_msg3_close(ssize_t a, ssize_t fd, char *buf);
 int check_msg2_writing(ssize_t a, char *namefile);
 int check_msg_args(int a);
-int _strlen(char *s);
 
 #endif /*MAIN_H*/
