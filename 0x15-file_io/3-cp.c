@@ -43,15 +43,18 @@ int check_msg2_writing(ssize_t a, char *namefile)
 int check_msg3_close(ssize_t a, ssize_t fd, char *buf)
 {
 	char *msg3 = "Error: Can't close fd ";
-
-	if (a == -1)
+	
+	if (a == 0)
+	{
+		return (0);
+	}
+	else
 	{
 		write(2, msg3, strlen(msg3));
 		printf("%li\n", fd);
 		free(buf);
 		exit(100);
 	}
-	return (0);
 }
 /**
  * check_msg4_read_exist - check if filedoes not exist, or can not read it
@@ -97,6 +100,7 @@ int main(int argc, char **argv)
 		a = close(fd_from);
 		check_msg3_close(a, fd_from, buf);
 		a = close(fd_to);
+		check_msg3_close(a, fd_to, buf);
 		free(buf);
 	}
 	else
