@@ -10,7 +10,7 @@ int check_msg_args(int a)
 
 	if (a != 3)
 	{
-		write(2, msg, strlen(msg));
+		dprintf(STDERR_FILENO, msg, strlen(msg));
 		exit(97);
 	}
 	return (0);
@@ -27,7 +27,7 @@ int check_msg2_writing(ssize_t a, char *namefile)
 
 	if (a == -1)
 	{
-		write(2, msg2, strlen(msg2));
+		dprintf(STDERR_FILENO, msg2, strlen(msg2));
 		printf("%s\n", namefile);
 		exit(99);
 	}
@@ -46,7 +46,7 @@ int check_msg3_close(ssize_t a, ssize_t fd, char *buf)
 
 	if (a == -1)
 	{
-		write(2, msg3, strlen(msg3));
+		dprintf(STDERR_FILENO, msg3, strlen(msg3));
 		printf("%li\n", fd);
 		free(buf);
 		exit(100);
@@ -65,7 +65,7 @@ int check_msg4_read_exist(ssize_t a, char *namefile)
 
 	if (a == -1)
 	{
-		write(2, msg4, strlen(msg4));
+		dprintf(STDERR_FILENO, msg4, strlen(msg4));
 		printf("%s\n", namefile);
 		exit(98);
 	}
@@ -87,9 +87,7 @@ int main(int argc, char **argv)
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from != -1)
 	{
-		fd_to = open(argv[2], O_RDONLY);
-		if (fd_to == -1)
-			fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+		fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 		if (fd_to != -1)
 		{
 			buf = malloc(sizeof(char) * 1024);
