@@ -90,7 +90,7 @@ int main(int argc, char **argv)
 			buf = malloc(sizeof(char) * 1024);
 			if (buf != 0)
 			{
-				a = read(fd_from, buf, 1024);
+				a = read(fd_from, buf, 1023);
 				while (a != 0)
 				{
 					check_msg4_read_exist(a, argv[1]);
