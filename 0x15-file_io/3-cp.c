@@ -51,7 +51,7 @@ int check_msg3_close(ssize_t a, ssize_t fd, char *buf)
 		free(buf);
 		exit(100);
 	}
-	return (a);
+	return (fd);
 }
 /**
  * check_msg4_read_exist - check if filedoes not exist, or can not read it
