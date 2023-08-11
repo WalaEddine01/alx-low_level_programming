@@ -39,17 +39,16 @@ int check_msg2_writing(ssize_t a, char *namefile)
  * @buf: the memory should free
  * Return: 0 if it fail
  */
-int check_msg3_close(ssize_t a, ssize_t fd, char *buf)
+int check_msg3_close(ssize_t a, ssize_t fd)
 {
 	char *msg3 = "Error: Can't close fd %li\n";
 
 	if (a == -1)
 	{
 		dprintf(STDERR_FILENO, msg3, fd);
-		free(buf);
 		exit(100);
 	}
-	return (fd);
+	return (0);
 }
 /**
  * check_msg4_read_exist - check if filedoes not exist, or can not read it
@@ -90,7 +89,7 @@ int main(int argc, char **argv)
 			buf = malloc(sizeof(char) * 1024);
 			if (buf != 0)
 			{
-				a = read(fd_from, buf, 1023);
+				a = read(fd_from, buf, 1024);
 				while (a != 0)
 				{
 					check_msg4_read_exist(a, argv[1]);
@@ -100,13 +99,13 @@ int main(int argc, char **argv)
 				}
 				free(buf);
 				b = close(fd_to);
-				check_msg3_close(b, fd_to, buf);
+				check_msg3_close(b, fd_to);
 			}
 		}
 		else
 			check_msg2_writing(fd_to, argv[2]);
 		a = close(fd_from);
-		check_msg3_close(a, fd_from, buf);
+		check_msg3_close(a, fd_from);
 	}
 	else
 		check_msg4_read_exist(fd_from, argv[1]);
