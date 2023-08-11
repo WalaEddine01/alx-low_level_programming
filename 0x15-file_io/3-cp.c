@@ -6,11 +6,9 @@
  */
 int check_msg_args(int a)
 {
-	char *msg = "Usage: cp file_from file_to\n";
-
 	if (a != 3)
 	{
-		dprintf(STDERR_FILENO, msg);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	return (0);
