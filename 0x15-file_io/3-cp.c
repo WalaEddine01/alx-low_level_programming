@@ -10,7 +10,7 @@ int check_msg_args(int a)
 
 	if (a != 3)
 	{
-		dprintf(STDERR_FILENO, msg, strlen(msg));
+		write(STDERR_FILENO, msg, strlen(msg));
 		exit(97);
 	}
 	return (0);
@@ -23,12 +23,11 @@ int check_msg_args(int a)
  */
 int check_msg2_writing(ssize_t a, char *namefile)
 {
-	char *msg2 = "Error: Can't write to ";
+	char *msg2 = "Error: Can't write to %s\n";
 
 	if (a == -1)
 	{
-		dprintf(STDERR_FILENO, msg2, strlen(msg2));
-		printf("%s\n", namefile);
+		dprintf(STDERR_FILENO, msg2, namefile);
 		exit(99);
 	}
 	return (0);
@@ -42,12 +41,11 @@ int check_msg2_writing(ssize_t a, char *namefile)
  */
 int check_msg3_close(ssize_t a, ssize_t fd, char *buf)
 {
-	char *msg3 = "Error: Can't close fd ";
+	char *msg3 = "Error: Can't close fd %li\n";
 
 	if (a == -1)
 	{
-		dprintf(STDERR_FILENO, msg3, strlen(msg3));
-		printf("%li\n", fd);
+		dprintf(STDERR_FILENO, msg3, fd);
 		free(buf);
 		exit(100);
 	}
@@ -61,12 +59,11 @@ int check_msg3_close(ssize_t a, ssize_t fd, char *buf)
  */
 int check_msg4_read_exist(ssize_t a, char *namefile)
 {
-	char *msg4 = "Error: Can't read from file ";
+	char *msg4 = "Error: Can't read from file %s\n";
 
 	if (a == -1)
 	{
-		dprintf(STDERR_FILENO, msg4, strlen(msg4));
-		printf("%s\n", namefile);
+		dprintf(STDERR_FILENO, msg4, namefile);
 		exit(98);
 	}
 	return (0);
