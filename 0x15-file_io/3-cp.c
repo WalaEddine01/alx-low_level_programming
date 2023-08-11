@@ -34,7 +34,6 @@ int check_msg2_writing(ssize_t a, char *namefile)
  * check_msg3_close - check if can not close a file descriptor
  * @a: input case
  * @fd: file descriptor
- * @buf: the memory should free
  * Return: 0 if it fail
  */
 int check_msg3_close(ssize_t a, ssize_t fd)
