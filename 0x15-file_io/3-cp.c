@@ -10,7 +10,7 @@ int check_msg_args(int a)
 
 	if (a != 3)
 	{
-		write(STDERR_FILENO, msg, strlen(msg));
+		dprintf(STDERR_FILENO, msg);
 		exit(97);
 	}
 	return (0);
