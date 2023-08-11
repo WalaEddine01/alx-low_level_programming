@@ -88,17 +88,28 @@ int main(int argc, char **argv)
 	if (fd_from != -1)
 	{
 		fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-		check_msg2_writing(fd_to, argv[2]);
-		buf = malloc(sizeof(char) * 1024);
-		a = read(fd_from, buf, 1024);
-		check_msg4_read_exist(a, argv[1]);
-		b = write(fd_to, buf, a);
-		check_msg2_writing(b, argv[2]);
+		if (fd_to != -1)
+		{
+			buf = malloc(sizeof(char) * 1024);
+			if (buf != 0)
+			{
+				a = read(fd_from, buf, 1024);
+				while (a != 0)
+				{
+					check_msg4_read_exist(a, argv[1]);
+					b = write(fd_to, buf, a);
+					check_msg2_writing(b, argv[2]);
+					a = read(fd_from, buf, 1024);
+				}
+				free(buf);
+				b = close(fd_to);
+				check_msg3_close(b, fd_to, buf);
+			}
+		}
+		else
+			check_msg2_writing(fd_to, argv[2]);
 		a = close(fd_from);
 		check_msg3_close(a, fd_from, buf);
-		b = close(fd_to);
-		check_msg3_close(b, fd_to, buf);
-		free(buf);
 	}
 	else
 		check_msg4_read_exist(fd_from, argv[1]);
