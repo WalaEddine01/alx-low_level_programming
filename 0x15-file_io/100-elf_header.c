@@ -1,4 +1,10 @@
-#include "main.h"
+#include <elf.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 void ver_P(unsigned char *e);
 void abios_P(unsigned char *e);
@@ -251,10 +257,14 @@ int main(int ac, char *av[])
 {
 	Elf64_Ehdr *head;
 	int op, re;
-	(void)ac;
 
+	if (ac != 2)
+	{
+		dprintf(STDERR_FILENO, "Usage: %s elf_filename\n", argv[0]);
+		exit(98);
+	}
 	op = open(av[1], O_RDONLY);
-	if (op == -1)
+	if (op == 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", av[1]);
 		exit(98);
@@ -262,8 +272,8 @@ int main(int ac, char *av[])
 	head = malloc(sizeof(Elf64_Ehdr));
 	if (head == NULL)
 	{
-		elf_C(op);
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", av[1]);
+		elf_C(op);
 		exit(98);
 	}
 	re = read(op, head, sizeof(Elf64_Ehdr));
