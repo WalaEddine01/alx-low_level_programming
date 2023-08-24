@@ -270,11 +270,16 @@ void elf_C(int elf)
  * Description: If the file is not an ELF File or
  *              the function fails - exit code 98.
  */
-int main(int __attribute__((__unused__)) ac, char *av[])
+int main(int ac, char *av[])
 {
 	Elf64_Ehdr *head;
 	int op, re;
 
+	if (ac != 2)
+	{
+		dprintf(STDERR_FILENO, "Usage: elf_header elf_filename\n");
+		exit(98);
+	}
 	op = open(av[1], O_RDONLY);
 	if (op == -1)
 	{
