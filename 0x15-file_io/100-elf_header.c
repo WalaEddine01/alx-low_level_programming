@@ -260,7 +260,7 @@ int main(int ac, char *av[])
 
 	if (ac != 2)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s elf_filename\n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage: %s elf_filename\n", av[0]);
 		exit(98);
 	}
 	op = open(av[1], O_RDONLY);
