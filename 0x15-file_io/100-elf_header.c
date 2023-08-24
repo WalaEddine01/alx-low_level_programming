@@ -260,19 +260,19 @@ int main(int ac, char *av[])
 
 	if (ac != 2)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s elf_filename\n", av[0]);
+		printf("Usage: %s elf_filename\n", av[0]);
 		exit(98);
 	}
 	op = open(av[1], O_RDONLY);
 	if (op == 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", av[1]);
+		printf("Error: Can't read file %s\n", av[1]);
 		exit(98);
 	}
 	head = malloc(sizeof(Elf64_Ehdr));
 	if (head == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", av[1]);
+		printf("Error: Can't read file %s\n", av[1]);
 		elf_C(op);
 		exit(98);
 	}
