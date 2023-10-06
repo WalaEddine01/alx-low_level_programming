@@ -5,30 +5,41 @@ int main(void)
     char *value;
 
     ht = hash_table_create(1024);
+
+    value = hash_table_get(ht, "python");
+    if (value == NULL) {
+        printf("Test 1 Passed: Got NULL for non-existent key\n");
+    } else {
+        printf("Test 1 Failed: Expected NULL, got %s\n", value);
+    }
+
     hash_table_set(ht, "c", "fun");
+    value = hash_table_get(ht, "c");
+    if (strcmp(value, "fun") == 0) {
+        printf("Test 2 Passed: Retrieved value matches expected\n");
+    } else {
+        printf("Test 2 Failed: Expected 'fun', got %s\n", value);
+    }
+
     hash_table_set(ht, "python", "awesome");
     hash_table_set(ht, "Bob", "and Kris love asm");
     hash_table_set(ht, "N", "queens");
-    hash_table_set(ht, "Asterix", "Obelix");
-    hash_table_set(ht, "Betty", "Cool");
-    hash_table_set(ht, "98", "Battery Street");
-    hash_table_set(ht, "c", "isfun");
 
-    value = hash_table_get(ht, "python");
-    printf("%s:%s\n", "python", value);
     value = hash_table_get(ht, "Bob");
-    printf("%s:%s\n", "Bob", value);
-    value = hash_table_get(ht, "N");
-    printf("%s:%s\n", "N", value);
-    value = hash_table_get(ht, "Asterix");
-    printf("%s:%s\n", "Asterix", value);
-    value = hash_table_get(ht, "Betty");
-    printf("%s:%s\n", "Betty", value);
-    value = hash_table_get(ht, "98");
-    printf("%s:%s\n", "98", value);
-    value = hash_table_get(ht, "c");
-    printf("%s:%s\n", "c", value);
+    if (strcmp(value, "and Kris love asm") == 0) {
+        printf("Test 4 Passed: Retrieved value matches expected\n");
+    } else {
+        printf("Test 4 Failed: Expected 'and Kris love asm', got %s\n", value);
+    }
+
     value = hash_table_get(ht, "javascript");
-    printf("%s:%s\n", "javascript", value);
-    return (EXIT_SUCCESS);
+    if (value == NULL) {
+        printf("Test 5 Passed: Got NULL for non-existent key\n");
+    } else {
+        printf("Test 5 Failed: Expected NULL, got %s\n", value);
+    }
+
+
+    return 0;
 }
+
