@@ -6,11 +6,14 @@
  */
 unsigned long int hash_djb2(const unsigned char *str)
 {
-	unsigned int hash;
+	unsigned long int hash;
 	int c = 0;
 
 	hash = 5381;
-	while (c = *str++)
-		hash = ((hash << 5) + hash) + c;
+	while (str[c])
+	{
+		hash = (hash << 5) + hash + str[c];
+		c++;
+	}
 	return (hash);
 }
