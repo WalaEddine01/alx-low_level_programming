@@ -2,11 +2,15 @@
 int main(void)
 {
     hash_table_t *ht;
-    unsigned long int index = key_index((unsigned char *)"btty", 1024);
 
-    ht = hash_table_create(1024);
-    hash_table_set(ht, "hetairas", "cool");
-    hash_table_set(ht, "mentioner", "cool");
-    printf("%s\n", ht->array[index]->key);
+    ht = hash_table_create(5);
+        hash_table_set(ht, "betty", "cool");
+        hash_table_set(ht, "hetairas", "cool");
+        hash_table_set(ht, "mentioner", "cool");
+        hash_table_set(ht, "heliotropes", "cool");
+        hash_table_set(ht, "neurospora", "cool");
+        hash_table_set(ht, "depravement", "cool");
+        hash_table_set(ht, "serafins", "cool");
+        hash_table_set(ht, "stylist", "cool");
     return (EXIT_SUCCESS);
 }
