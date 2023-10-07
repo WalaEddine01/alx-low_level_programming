@@ -20,11 +20,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	tmp2->key = strdup(key);
 	if (tmp2->key == NULL)
+	{
+		free(tmp2);
 		return (0);
+	}
 	tmp2->value = strdup(value);
 	if (tmp2->value == NULL)
+	{
+		free(tmp2->key);
+		free(tmp2);
 		return (0);
-	tmp2->next = NULL;
+	}
+	tmp2->next = ht->array[index];
 	ht->array[index] = tmp2;
 	return (1);
 }
