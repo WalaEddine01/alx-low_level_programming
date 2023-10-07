@@ -31,10 +31,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(tmp2);
 		return (0);
 	}
-	if (ht->array[index])
-		tmp2->next = NULL;
-	else
-		tmp2->next = ht->array[index];
+	tmp2->next = NULL;
 	ht->array[index] = tmp2;
 	return (1);
 }
