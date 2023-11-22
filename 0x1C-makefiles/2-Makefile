@@ -5,3 +5,6 @@ NAME= school
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
+
+obj: main.c school.c
+	$(CC) -c main.c school.c
