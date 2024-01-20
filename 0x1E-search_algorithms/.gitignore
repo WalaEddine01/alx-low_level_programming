@@ -1,0 +1,6 @@
+# .gitignore
+
+# Virtual environment
+venv/
+__pycache__/
+z.sh
